@@ -1,4 +1,17 @@
 /*global jQuery*/
+/**
+ * 参数说明：
+ *    - options = {
+ *          maxSecond: 5 //默认是5秒
+ *          url:       '' //默认不跳转
+ *          timeTag:   '#time' //显示时间的位置
+ *          promptMsg: '该页面将在%s后跳转' //默认提示消息，可以自定义，格式参考这个
+ *      }
+ * 用法：
+ *    - $('#dialog').showTimeoutDialog(options);
+ *
+ * @author kovey
+ */
 (function ($) {
     $.fn.showTimeoutDialog = function (options) {
         if (options.timeTag === undefined || options.timeTag === '') {
